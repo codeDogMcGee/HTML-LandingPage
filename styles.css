@@ -94,20 +94,14 @@ a:link {
     font-size: 2.5em;
 }
 
-.site-div:hover a > img {
+.site-content:hover a > img {
     opacity: 0.2;
 }
 
-.site-div:hover .sit-div-hover {
+.site-content:hover .sit-div-hover {
     opacity: 1;
     transition: .5s ease;
 }
-
-/* .site-div-text {
-    color: #1b1b2f;
-    font-weight: bold;
-    font-size: 2em;
-} */
 
 @media only screen and (max-width: 1030px) {
     .site-header > h3 {

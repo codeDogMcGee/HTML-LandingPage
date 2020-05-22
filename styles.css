@@ -13,7 +13,7 @@
 .header-div {
     border-bottom: solid #888888;
     border-width: thin;
-    margin: 0 10%;
+    margin: 20px 10%;
 
     display: grid;
     grid-template-columns: 100%;
@@ -24,20 +24,23 @@
     grid-column: 1 / 2;
      
     font-size: 2em;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     color: #120136;
+    text-align: center;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+
 }
 
 .header-contact-div {
     grid-column: 0 / 1;
     place-self: center;
+
+    text-align: center;
     margin-bottom: 10px;
-    
 }
 
 a:link {
@@ -48,20 +51,29 @@ a:link {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
 }
 
-.site-div {
+.site-header > h3 {
+    color: #120136;
+    font-size: 1em;
+    text-align: center;
+    opacity: 0;
+    margin-bottom: 0;
+}
+
+.site-content {
     border: solid #888888;
     border-width: thin;
     border-radius: 10px;
     padding: 15px;
-    margin: 10px 0;
 
     position: relative;
+
+    width: 12em;
+    height: 12em;
 }
 
-.site-div > a > img {
+.site-content > a > img {
     width: 12em;
     height: 12em;
     opacity: 1;
@@ -97,6 +109,8 @@ a:link {
     font-size: 2em;
 } */
 
-/* @media only screen and (max-width: 400px) {
-    .header-div {
-} */
+@media only screen and (max-width: 1030px) {
+    .site-header > h3 {
+        opacity: 1;
+    }
+}

@@ -1,7 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+    min-width: 310px;
+}
+
 .container-main {
     width: 100%;
-    height:auto;
-    min-height: 400px;
+    max-width: 800px;
 
     display: grid;
     grid-template-columns: 100%;
@@ -20,9 +25,9 @@
     grid-template-rows: 3fr 1fr;
 }
 
-.header-label-div{
+.header-label-div {
     grid-column: 1 / 2;
-     
+
     font-size: 2em;
     /* white-space: nowrap; */
     color: #120136;
@@ -32,7 +37,6 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-
 }
 
 .header-contact-div {
@@ -40,71 +44,37 @@
     place-self: center;
 
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header-contact-div a img {
+    width: 20px;
 }
 
 a:link {
     text-decoration: none;
 }
 
-.links-div {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+.links {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: min-content;
 
-.site-header > h3 {
-    color: #120136;
-    font-size: 1em;
+    justify-self: center;
+
+    width: 80%;
     text-align: center;
-    opacity: 0;
-    margin-bottom: 0;
 }
 
-.site-content {
-    border: solid #888888;
-    border-width: thin;
-    border-radius: 10px;
-    padding: 15px;
-
-    position: relative;
-
-    width: 12em;
-    height: 12em;
+.row-title {
+    grid-column: 1;
 }
 
-.site-content > a > img {
-    width: 12em;
-    height: 12em;
-    opacity: 1;
+.row-title h3 {
+    margin: 1rem 0.25rem;
 }
 
-.sit-div-hover {
-    opacity: 0;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-
-    color: #120136;
-    font-weight: bold;
-    font-size: 2.5em;
-}
-
-.site-content:hover a > img {
-    opacity: 0.2;
-}
-
-.site-content:hover .sit-div-hover {
-    opacity: 1;
-    transition: .5s ease;
-}
-
-@media only screen and (max-width: 1030px) {
-    .site-header > h3 {
-        opacity: 1;
-    }
+.row-description {
+    grid-column: 2;
+    margin: 1rem;
 }
